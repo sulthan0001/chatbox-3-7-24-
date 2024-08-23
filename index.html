@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHAT BOX</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      .box {
+        background-color: rgb(80, 81, 82);
+        border: solid black;
+        height: 707px;
+        width: 1515px;
+        border-radius: 5px;
+      }
+
+      .heading {
+        border: 2px solid silver;
+        height: 70px;
+        width: 1501px;
+        margin-left: 5px;
+        margin-top: 4px;
+      }
+      .button1 {
+        color: rgba(100, 99, 99, 0.77);
+        border: 2px solid rgb(161, 161, 219);
+        border-radius: 70px;
+        height: 60px;
+        width: 400px;
+        margin-left: 550px;
+        margin-top: 5px;
+        padding-bottom: 25px;
+        background-color: rgb(255, 255, 255);
+      }
+      .heading1 {
+        border: 2px solid silver;
+        height: 70px;
+        width: 550px;
+        margin-left: 5px;
+        margin-top: 4px;
+      }
+      .box1 {
+        background-color: rgba(25, 24, 24, 0.73);
+        height: 543px;
+        width: 550px;
+        border: 2px solid silver;
+        /* border-radius: 5px; */
+        margin-left: 5px;
+        /* margin-top: 3px; */
+        overflow-y: hidden;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .chat1,
+      .chat2,
+      .chat3,
+      .chat4,
+      .chat5,
+      .chat6,
+      .chat7,
+      .chat8,
+      .chat9,
+      .chat10 {
+        border: 1px solid rgb(182, 182, 182);
+        height: 80px;
+        padding: 6px;
+        color: white;
+        
+      }
+
+      .box2 {
+        background-image: url(./images/chat.jpg);
+        height: 478px;
+        width: 950px;
+        border: 2px solid silver;
+        margin-left: 559px;
+        overflow-x: hidden;
+      }
+      .menu {
+        font-size: 50px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .searchbar {
+        border: 1px solid whitesmoke;
+        height: 50px;
+        width: 420px;
+        border-radius: 20px;
+        margin-left: 100px;
+        margin-top: -55px;
+        background-color: aliceblue;
+      }
+      .search {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 370px;
+      }
+      .minimize,
+      .maximize,
+      .cancel {
+        font-size: 40px;
+        margin-left: 20px;
+      }
+      .minimize {
+        margin-left: 350px;
+        margin-top: 10px;
+      }
+      img {
+        border: 4px solid silver;
+        border-radius: 50px;
+        margin-top: 9px;
+      }
+      .text {
+        margin-left: 80px;
+        margin-top: -50px;
+      }
+      .t {
+        margin-left: 110px;
+        margin-top: -20px;
+        color: rgb(181, 234, 181);
+      }
+
+      ion-icon {
+        margin-left:85px;
+        
+      }
+      .chat{
+      border: 2px solid silver;
+        height: 69px;
+        width: 948px;
+        background-color: rgb(91, 153, 239);
+        margin-left: 559px;
+        margin-top: -619px;
+      }
+      .lastseen{
+        margin-left: 70px;
+        margin-top: 35px;
+      }
+      .c1{
+        top: 0%;
+        position: sticky;
+        display: flex;
+        border: 1px solid gray;
+        height: 30px;
+        width: 120px;
+        background-color: rgb(133, 161, 199);
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-left: 460px;
+       
+      }
+      .c2{
+        display: flex;
+        border: 1px solid gray;
+        height: 25px;
+        width: 200px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 10px;
+       
+      }
+      .cccc{
+        display: flex;
+        border: 1px solid gray;
+        height: 25px;
+        width: 200px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 10px;
+    
+      }
+      .c3{
+       top: 0%;
+       position: sticky;
+        display: flex;
+        border: 1px solid gray;
+        height: 30px;
+        width: 120px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-left:460px;
+      }.c4{
+        display: flex;
+        border: 1px solid gray;
+        height: 25px;
+        width: 200px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 720px;
+      }.c5{
+        display: flex;
+        border: 1px solid gray;
+        height: 50px;
+        width: 100px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }.c6{
+        display: flex;
+        border: 1px solid gray;
+        height: 50px;
+        width: 100px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }.c7{
+        display: flex;
+        border: 1px solid gray;
+        height: 50px;
+        width: 100px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }.c8{
+        display: flex;
+        border: 1px solid gray;
+        height: 50px;
+        width: 100px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .c9{
+        display: flex;
+        border: 1px solid gray;
+        height: 50px;
+        width: 100px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .c10{
+        display: flex;
+        border: 1px solid gray;
+        height: 30px;
+        width: 120px;
+        background-color: rgb(133, 161, 199);
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 460px;
+      }
+      .c11{
+        display: flex;
+        border: 1px solid gray;
+        height: 50px;
+        width: 100px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .c12{
+        display: flex;
+        border: 1px solid gray;
+        height: 50px;
+        width: 100px;
+        background-color: silver;
+        border-radius: 100px;
+        align-items: center;
+        justify-content: center;
+        padding-top: px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .typebox{
+        border: 2px solid silver;
+        height: 62px;
+        width: 950px;
+        margin-left: 559px;
+        background-color: rgb(255, 255, 255);
+      }
+      .ccc{
+        margin-left: 10px;
+        margin-top: -50px;
+      }
+      .search1{
+        border: 2px solid black;
+        height: 45px;
+        width: 800px;
+        border-radius: 50px;
+        margin-top: 6px;
+        margin-left: 80px;
+      }
+      .icon{
+        color: rgb(0, 0, 0);
+        font-size: 40px;
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+      .search1{
+        
+        margin-top: -48px;
+        background-color: aliceblue;
+        cursor: pointer;
+       
+      }
+      .search1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.minimize:hover {
+  background-color: aliceblue;
+}
+  
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="heading">
+        <button class="button1"><h1>WHATSAPP</h1></button>
+        <ion-icon name="remove-outline" class="minimize"></ion-icon>
+        <ion-icon name="browsers-outline" class="maximize"></ion-icon>
+        <ion-icon name="close-outline" class="cancel"></ion-icon>
+      </div>
+      <div class="heading1">
+        <ion-icon name="menu-outline" class="menu"></ion-icon>
+        <div class="searchbar">
+          <ion-icon
+            name="search-outline"
+            class="search"
+            placeholder="searchbar"
+          ></ion-icon>
+        </div>
+      </div>
+      <div class="box1">
+        <div class="chat1">
+          <img src="./images/alluarjun.jpg" height="55px" />
+          <h4 class="text">AA</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">good pic bro</p>
+        </div>
+        <div class="chat2">
+          <img src="./images/charan.jpg" height="55px" />
+          <h4 class="text">Ram</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">everything will be ok</p>
+        </div>
+        <div class="chat3">
+          <img src="./images/himalayan.jpg" height="55px"  width="55px"/>
+          <h4 class="text">Suresh anna</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">can we meet bro</p>
+        </div>
+        <div class="chat4">
+          <img src="./images/pooja2.jpg" height="55px" width="55px" />
+          <h4 class="text">My love</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">love u too maa.........</p>
+        </div>
+        <div class="chat5">
+          <img src="./images/IMG-20240719-WA0010.jpg" height="55px" />
+          <h4 class="text">sruthi</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">we have exam tommorrow</p>
+        </div>
+        <div class="chat6">
+          <img src="./images/nani.jpg" height="55px" />
+          <h4 class="text">nani</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">gd mrng bro..</p>
+        </div>
+        <div class="chat7">
+          <img src="./images/ntr.jpg" height="55px" />
+          <h4 class="text">NTR</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">http//www.github.com/...</p>
+        </div>
+        <div class="chat8">
+          <img src="./images/re.jpg" height="55px" width="55px" />
+          <h4 class="text">Ride</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">bye</p>
+        </div>
+        <div class="chat9">
+          <img src="./images/prabhas.jpg" height="55px" />
+          <h4 class="text">prabhas</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">kk</p>
+        </div>
+        <div class="chat10">
+          <img src="./images/charminar.jpg" height="55px" width="55px"/>
+          <h4 class="text">chrminar frnd</h4>
+          <ion-icon name="checkmark-done-outline" class="readmark"></ion-icon>
+          <p class="t">its nice frnd</p>
+        </div>
+      </div>
+      <div class="chat">
+        <div class="lastseen">Last Seen : 18:28</div>
+        <div class="ccc">
+          <img src="./images/charminar.jpg" height="40px" width="40px"> 
+        </div>
+        
+      </div>
+      <div class="box2">
+        <div class="c1">WEDNESDAY</div>
+        <div class="c2">HI</div>
+        <div class="c4">hi</div>
+        <div class="cccc">HOW ARE YOU</div>
+        <div class="c4">fine</div>
+        <div class="c4">what about u</div>
+        <div class="cccc">i am also fine</div>
+        <div class="c4">ok have a nice day </div>
+        <div class="c3">FRIDAY</div>
+        <div class="c4">HI bro</div>
+        <div class="cccc">hi</div>
+        <div class="cccc">how is ur day</div>
+        <div class="c4">good</div>
+        <div class="c4">what about urs</div>
+        <div class="cccc">fine bro</div>
+        <div class="c4">nice</div>
+        <div class="cccc">any plans today</div>
+        <div class="c4">no bro </div>
+        <div class="c4">what about u</div>
+        <div class="cccc">same bro</div>
+        <div class="c10">TODAY</div>
+        <div class="cccc">hi</div>
+        <div class="c4">hi</div>
+      </div>
+      <div class="typebox"> 
+        <ion-icon name="attach-outline" class="icon" ></ion-icon>
+        <div class="search1" > </div>
+       
+      </div>
+    </div>
+  </body>
+</html>
